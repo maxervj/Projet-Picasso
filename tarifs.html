@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs du Festival</title>
+    <style>
+        table {
+            width: 80%; /* Largeur du tableau */
+            border-collapse: collapse; /* Supprime les espaces entre les cellules */
+            margin: 20px auto; /* Centrer le tableau */
+            font-family: Arial, sans-serif; /* Police pour un style plus proche */
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ccc; /* Bordure légère autour des cellules */
+            padding: 10px; /* Espacement interne */
+            text-align: left; /* Texte aligné à gauche */
+        }
+        th {
+            background-color: #e26a00; /* Orange foncé pour l'en-tête */
+            color: white; /* Texte en blanc */
+            font-weight: bold;
+        }
+        tr:nth-child(odd) td {
+            background-color: #ffe4b2; /* Orange clair pour les lignes impaires */
+        }
+        tr:nth-child(even) td {
+            background-color: #ffffff; /* Blanc pour les lignes paires */
+        }
+        td:first-child {
+            width: 70%; /* La première colonne est plus large */
+        }
+        h1 {
+            text-align: center; /* Centrer le titre */
+            color: #e26a00; /* Couleur orange foncé pour le titre */
+        }
+        p {
+            text-align: center; /* Centrer le texte de l'introduction */
+            font-size: 16px;
+            color: #333; /* Couleur du texte */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tarifs du Festival</h1>
+    <p>Découvrez ci-dessous les tarifs pour accéder à notre festival d'animation. Nous proposons différentes catégories de tarifs pour répondre aux besoins de tous les visiteurs. Veuillez consulter les informations ci-dessous pour plus de détails.</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Catégories</th>
+                <th>Tarifs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Normal</strong></td>
+                <td>32&euro;</td>
+            </tr>
+            <tr>
+                <td><strong>Réduit (enfants entre 12 et 18, séniors de plus de 65 ans)</strong></td>
+                <td>24&euro;</td>
+            </tr>
+            <tr>
+                <td><strong>Étudiant, demandeurs d'emploi</strong></td>
+                <td>20&euro;</td>
+            </tr>
+            <tr>
+                <td><strong>Membre de l'association du festival international d'animation d'Annecy</strong></td>
+                <td>12&euro;</td>
+            </tr>
+            <tr>
+                <td><strong>-12 ans</strong></td>
+                <td>Gratuit</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Pour toute question ou demande d'informations supplémentaires, n'hésitez pas à nous contacter ou à visiter notre site web. Nous vous remercions de votre intérêt pour notre événement !</p>
+</body>
+</html>
