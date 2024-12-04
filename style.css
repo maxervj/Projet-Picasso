@@ -1,35 +1,149 @@
+/* Corps global */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    
-        background-image: url('chemin/vers/mon-image.jpg'); /* Chemin vers l'image */
-        background-size: cover; /* L'image couvre toute la page */
-        background-position: center; /* Centre l'image */
-        background-repeat: no-repeat; /* Empêche la répétition */
-        background-attachment: fixed; /* L'image reste fixe pendant le défilement *
-    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    background-color: #f4e3c1; /* Couleur douce et chaleureuse */
+    color: #444; /* Couleur de texte lisible */
+    margin: 0;
+    padding: 0;
 }
 
+/* Titres principaux */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #333; /* Texte plus sombre pour les titres */
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* En-tête */
 header {
-    background: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
-    margin-bottom: 20px;
+    background-color: #f4e3c1;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
 
+header h1 {
+    color: #444;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+/* Barre de navigation */
+ /* Barre de navigation */
+        .navbar {
+            background-color: #d4af37; /* Couleur dorée */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+        }
+
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: white !important;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f4e3c1 !important;
+            text-decoration: underline;
+        }
+
+.navbar .navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+    color: white;
+    font-size: 1rem;
+}
+
+.navbar .nav-link:hover {
+    color: #f4e3c1;
+    text-decoration: underline;
+}
+
+/* Carousel */
 .carousel img {
-    height: 80vh; /* Ajuste la hauteur des images à 80% de la hauteur de la fenêtre */
-    object-fit: contain; /* Assure que les images s'adaptent sans déformation */
+    height: 70vh; /* Ajuste la hauteur des images */
+    object-fit: cover; /* Assure que les images sont bien centrées */
+    border-radius: 8px; /* Coins arrondis pour une esthétique moderne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour les images */
 }
 
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre pour améliorer la lisibilité */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Blocs de contenu */
 blockquote {
     font-size: 1.2rem;
     font-style: italic;
-    border-left: 5px solid #6c757d;
-    padding-left: 10px;
+    border-left: 5px solid #d4af37; /* Couleur dorée */
+    padding-left: 15px;
+    color: #555;
+    background-color: #f9f3e4;
+    border-radius: 8px;
+    margin: 20px 0;
 }
- /* Ajustement des légendes */
- .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.6); /* Ajout d'un fond sombre semi-transparent */
-    padding: 10px;
+
+/* Pied de page */
+footer {
+    background-color: #d4af37;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* Grille des œuvres */
+.artwork img {
+    border: 2px solid #e4cda1;
     border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.artwork img:hover {
+    transform: scale(1.05); /* Zoom sur les images au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.artwork h5 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: #444;
+}
+
+.artwork a:hover h5 {
+    color: #d4af37; /* Met en valeur le texte des titres au survol */
+}
+
+/* Adaptation responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .carousel img {
+        height: 50vh;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        
+    }
+}
+

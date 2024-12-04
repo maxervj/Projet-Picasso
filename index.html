@@ -3,73 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exposition - Accueil</title>
+    <title>Exposition Picasso - Accueil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <header class="bg-light text-center py-5">
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Exposition Picasso</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="oeuvres.html">Les Œuvres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a-propos.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informations.html">Informations pratiques</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête -->
+    <header>
         <h1>Bienvenue à l'Exposition Picasso</h1>
-        <p class="lead">Une exploration des chefs-d'œuvre d'un artiste iconique.</p>
+        <p>Découvrez les chefs-d'œuvre de Pablo Picasso qui ont marqué l'histoire de l'art.</p>
     </header>
 
-    <main class="container">
-        <section class="my-4 text-center">
-            <p class="fs-4">
-                Découvrez les œuvres de Pablo Picasso qui ont marqué l’histoire de l’art et inspiré les films d’animation.
-            </p>
-        </section>
-
-        <section id="carouselOeuvres" class="carousel slide mb-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/Femme-asise.jpeg" class="d-block w-100" alt="Femme assise">
-                    <div class="carousel-caption">
-                        <h5>Femme Assise</h5>
-                        <p>Une œuvre remarquable.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/La-femme-qui-pleure.jpeg" class="d-block w-100" alt="La Femme qui Pleure">
-                    <div class="carousel-caption">
-                        <h5>La Femme qui Pleure</h5>
-                        <p>Une œuvre chargée d’émotion.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/Les-Demoiselles-d-Avignon.jpg" class="d-block w-100" alt="Les Demoiselles d'Avignon">
-                    <div class="carousel-caption">
-                        <h5>Les Demoiselles d'Avignon</h5>
-                        <p>Une œuvre révolutionnaire.</p>
-                    </div>
+    <!-- Carrousel -->
+    <div id="carouselOeuvres" class="carousel slide container mt-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="img/Femme-asise.jpeg" class="d-block w-100" alt="Femme Assise">
+                <div class="carousel-caption">
+                    <h5>Femme Assise</h5>
+                    <p>Un chef-d'œuvre de composition et de couleur.</p>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselOeuvres" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Précédent</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselOeuvres" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Suivant</span>
-            </button>
-        </section>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="img/La-femme-qui-pleure.jpeg" class="d-block w-100" alt="La Femme qui Pleure">
+                <div class="carousel-caption">
+                    <h5>La Femme qui Pleure</h5>
+                    <p>Un tableau chargé d'émotion et de symbolisme.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="img/Les-Demoiselles-d-Avignon.jpg" class="d-block w-100" alt="Les Demoiselles d'Avignon">
+                <div class="carousel-caption">
+                    <h5>Les Demoiselles d'Avignon</h5>
+                    <p>Une œuvre avant-gardiste qui a révolutionné l'art moderne.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Contrôles de navigation -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOeuvres" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselOeuvres" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+        </button>
+    </div>
 
-        <section class="text-center">
-            <blockquote class="blockquote">
-                <p class="fs-5">
-                    "L’art de Picasso est une fenêtre vers l’imaginaire, une source d’inspiration pour les créateurs de films animés."
-                </p>
-                <footer class="blockquote-footer">Commissaire de l'exposition</footer>
-            </blockquote>
-        </section>
-    </main>
-
-    <footer class="text-center py-3 bg-light">
-        <a href="oeuvres.html" class="btn btn-primary">Voir les œuvres</a>
-        <a href="a-propos.html" class="btn btn-secondary">À propos de Picasso</a>
-        <a href="informations.html" class="btn btn-info">Informations pratiques</a>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Exposition Picasso. Tous droits réservés. <a href="informations.html">Contactez-nous</a></p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <!-- Bootstrap JS -->
+    <script
