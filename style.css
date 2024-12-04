@@ -38,12 +38,12 @@ header {
     text-align: center;
     background: linear-gradient(135deg, #f4e3c1, #d4af37); /* Dégradé élégant */
     color: #333;
-    padding: 50px 20px;
+    padding: 40px 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -56,15 +56,14 @@ header p {
 
 /* Carousel */
 .carousel {
-    margin: 30px auto;
+    height: 90vh; /* Hauteur globale du carrousel réduite */
 }
 
 .carousel img {
-    height: 65vh;
-    object-fit: cover; /* Assure un bon affichage sans déformation */
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour les images */
+    height: 90vh; /* Taille des images réduite */
+    object-fit: cover; /* Assure que les images gardent leurs proportions */
 }
+
 
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.75); /* Fond sombre pour une bonne lisibilité */
