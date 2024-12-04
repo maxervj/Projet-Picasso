@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 20px;
+}
+
+.carousel img {
+    height: 80vh; /* Ajuste la hauteur des images à 80% de la hauteur de la fenêtre */
+    object-fit: contain; /* Assure que les images s'adaptent sans déformation */
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    border-left: 5px solid #6c757d;
+    padding-left: 10px;
+}
+ /* Ajustement des légendes */
+ .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Ajout d'un fond sombre semi-transparent */
+    padding: 10px;
+    border-radius: 10px;
+}
