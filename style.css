@@ -1,6 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    
+        background-image: url('chemin/vers/mon-image.jpg'); /* Chemin vers l'image */
+        background-size: cover; /* L'image couvre toute la page */
+        background-position: center; /* Centre l'image */
+        background-repeat: no-repeat; /* Empêche la répétition */
+        background-attachment: fixed; /* L'image reste fixe pendant le défilement *
+    
 }
 
 header {
