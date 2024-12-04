@@ -30,7 +30,7 @@
     </header>
 
     <main class="container">
-        <div class="row g-4">
+        <div class="row g-4" id="oeuvres-container">
             <!-- Œuvre 1 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Femme_assise" target="_blank">
@@ -108,5 +108,28 @@
     <footer class="text-center py-3 bg-light mt-5">
         <a href="index.html" class="btn btn-secondary">Retour à l'accueil</a>
     </footer>
+
+    <script>
+        // Fonction pour mélanger un tableau
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; // échange les éléments
+            }
+        }
+
+        // Récupérer le conteneur des œuvres
+        const oeuvresContainer = document.getElementById('oeuvres-container');
+        
+        // Récupérer toutes les œuvres (divs avec la classe 'artwork')
+        const artworks = Array.from(oeuvresContainer.getElementsByClassName('artwork'));
+
+        // Mélanger les œuvres
+        shuffleArray(artworks);
+
+        // Réinsérer les œuvres mélangées dans le conteneur
+        oeuvresContainer.innerHTML = '';
+        artworks.forEach(artwork => oeuvresContainer.appendChild(artwork));
+    </script>
 </body>
 </html>
