@@ -3,73 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exposition - Accueil</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Tarifs du Festival</title>
+    <style>
+        table {
+            width: 80%; /* Largeur du tableau */
+            border-collapse: collapse; /* Supprime les espaces entre les cellules */
+            margin: 20px auto; /* Centrer le tableau */
+            font-family: Arial, sans-serif; /* Police pour un style plus proche */
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ccc; /* Bordure légère autour des cellules */
+            padding: 10px; /* Espacement interne */
+            text-align: left; /* Texte aligné à gauche */
+        }
+        th {
+            background-color: #e26a00; /* Orange foncé pour l'en-tête */
+            color: white; /* Texte en blanc */
+            font-weight: bold;
+        }
+        tr:nth-child(odd) td {
+            background-color: #ffe4b2; /* Orange clair pour les lignes impaires */
+        }
+        tr:nth-child(even) td {
+            background-color: #ffffff; /* Blanc pour les lignes paires */
+        }
+        td:first-child {
+            width: 70%; /* La première colonne est plus large */
+        }
+        h1 {
+            text-align: center; /* Centrer le titre */
+            color: #e26a00; /* Couleur orange foncé pour le titre */
+        }
+        p {
+            text-align: center; /* Centrer le texte de l'introduction */
+            font-size: 16px;
+            color: #333; /* Couleur du texte */
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-light text-center py-5">
-        <h1>Bienvenue à l'Exposition Picasso</h1>
-        <p class="lead">Une exploration des chefs-d'œuvre d'un artiste iconique.</p>
-    </header>
+    <h1>Tarifs du Festival</h1>
+    <p>Découvrez ci-dessous les tarifs pour accéder à notre festival d'animation. Nous proposons différentes catégories de tarifs pour répondre aux besoins de tous les visiteurs. Veuillez consulter les informations ci-dessous pour plus de détails.</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Catégories</th>
+                <th>Tarifs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Normal</strong></td>
+                <td>32&euro;</td>
+            </tr>
+            <tr>
+                <td><strong>Réduit (enfants entre 12 et 18, séniors de plus de 65 ans)</strong></td>
+                <td>24&euro;</td>
+            </tr>
+            <tr>
+                <td><strong>Étudiant, demandeurs d'emploi</strong></td>
+                <td>20&euro;</td>
+            </tr>
+            <tr>
+                <td><strong>Membre de l'association du festival international d'animation d'Annecy</strong></td>
+                <td>12&euro;</td>
+            </tr>
+            <tr>
+                <td><strong>-12 ans</strong></td>
+                <td>Gratuit</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <main class="container">
-        <section class="my-4 text-center">
-            <p class="fs-4">
-                Découvrez les œuvres de Pablo Picasso qui ont marqué l’histoire de l’art et inspiré les films d’animation.
-            </p>
-        </section>
-
-        <section id="carouselOeuvres" class="carousel slide mb-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/Femme-asise.jpeg" class="d-block w-100" alt="Femme assise">
-                    <div class="carousel-caption">
-                        <h5>Femme Assise</h5>
-                        <p>Une œuvre remarquable.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/La-femme-qui-pleure.jpeg" class="d-block w-100" alt="La Femme qui Pleure">
-                    <div class="carousel-caption">
-                        <h5>La Femme qui Pleure</h5>
-                        <p>Une œuvre chargée d’émotion.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/Les-Demoiselles-d-Avignon.jpg" class="d-block w-100" alt="Les Demoiselles d'Avignon">
-                    <div class="carousel-caption">
-                        <h5>Les Demoiselles d'Avignon</h5>
-                        <p>Une œuvre révolutionnaire.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselOeuvres" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Précédent</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselOeuvres" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Suivant</span>
-            </button>
-        </section>
-
-        <section class="text-center">
-            <blockquote class="blockquote">
-                <p class="fs-5">
-                    "L’art de Picasso est une fenêtre vers l’imaginaire, une source d’inspiration pour les créateurs de films animés."
-                </p>
-                <footer class="blockquote-footer">Commissaire de l'exposition</footer>
-            </blockquote>
-        </section>
-    </main>
-
-    <footer class="text-center py-3 bg-light">
-        <a href="oeuvres.html" class="btn btn-primary">Voir les œuvres</a>
-        <a href="a-propos.html" class="btn btn-secondary">À propos de Picasso</a>
-        <a href="informations.html" class="btn btn-info">Informations pratiques</a>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <p>Pour toute question ou demande d'informations supplémentaires, n'hésitez pas à nous contacter ou à visiter notre site web. Nous vous remercions de votre intérêt pour notre événement !</p>
 </body>
 </html>
