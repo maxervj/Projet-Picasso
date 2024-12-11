@@ -8,7 +8,7 @@
     <!-- Lien vers le CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Styles pour personnaliser la table */
+        /* Styles pour personnaliser la table et le formulaire */
         table {
             width: 80%; 
             border-collapse: collapse; 
@@ -45,6 +45,19 @@
             color: #333;
             margin: 20px;
         }
+        .form-control {
+            max-width: 100px;
+        }
+        .total-container {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px;
+        }
+        .btn-calculate {
+            background-color: #e26a00;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -75,7 +88,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="mentions-legales.html">Mentions légales</a>
-
                     </li>
                 </ul>
             </div>
@@ -121,8 +133,28 @@
             </table>
         </section>
 
+        <!-- Formulaire de calcul -->
         <section>
-            <p>Pour en savoir plus sur les tarifs et les avantages du Festival International d'Animation, <a href="./informations.html">allez sur notre page d'informations</a>.</p>
+            <form id="ticket-form" class="text-center">
+                <div class="mb-3">
+                    <label for="normal" class="form-label">Nombre de tickets (Normal):</label>
+                    <input type="number" id="normal" class="form-control d-inline-block" min="0" value="0">
+                </div>
+                <div class="mb-3">
+                    <label for="reduit" class="form-label">Nombre de tickets (Réduit):</label>
+                    <input type="number" id="reduit" class="form-control d-inline-block" min="0" value="0">
+                </div>
+                <div class="mb-3">
+                    <label for="etudiant" class="form-label">Nombre de tickets (Étudiant):</label>
+                    <input type="number" id="etudiant" class="form-control d-inline-block" min="0" value="0">
+                </div>
+                <div class="mb-3">
+                    <label for="membre" class="form-label">Nombre de tickets (Membre):</label>
+                    <input type="number" id="membre" class="form-control d-inline-block" min="0" value="0">
+                </div>
+                <button type="button" id="calculate-btn" class="btn btn-calculate">Calculer le tarif total</button>
+            </form>
+            <div id="total" class="total-container">Total: 0&euro;</div>
         </section>
     </main>
 
@@ -130,13 +162,29 @@
         <p>&copy; 2024 Festival International d'Animation. Tous droits réservés.</p>
     </footer>
 
-    <!-- Lien vers le fichier JS de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', function() {
+            const normalPrice = 32;
+            const reduitPrice = 24;
+            const etudiantPrice = 20;
+            const membrePrice = 12;
+
+            const normalTickets = parseInt(document.getElementById('normal').value) || 0;
+            const reduitTickets = parseInt(document.getElementById('reduit').value) || 0;
+            const etudiantTickets = parseInt(document.getElementById('etudiant').value) || 0;
+            const membreTickets = parseInt(document.getElementById('membre').value) || 0;
+
+            const total = (normalTickets * normalPrice) +
+                          (reduitTickets * reduitPrice) +
+                          (etudiantTickets * etudiantPrice) +
+                          (membreTickets * membrePrice);
+
+            document.getElementById('total').innerText = `Total: ${total}€`;
+        });
+    </script>
     <!-- Footer -->
 <footer class="footer bg-light text-center py-4">
-    <p>&copy; 2024 Festival International d'Animation. Tous droits réservés.</p>
     <p><a href="mentions-legales.html" style="color: #e26a00; text-decoration: none;">Mentions légales</a></p>
 </footer>
-
 </body>
 </html>
