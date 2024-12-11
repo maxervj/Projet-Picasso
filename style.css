@@ -15,16 +15,16 @@ body {
 }
 
 .navbar .navbar-brand {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #faf3e0 !important; /* Texte en blanc cassé */
+    color: black !important; /* Texte en blanc cassé */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .navbar .navbar-nav .nav-link {
     font-size: 1.1rem;
-    color: white !important;
+    color: b !important;
     margin: 0 10px;
 }
 
@@ -38,7 +38,7 @@ header {
     text-align: center;
     background: linear-gradient(135deg, #f4e3c1, #d4af37); /* Dégradé élégant */
     color: #333;
-    padding: 40px 15px;
+    padding: 30px 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -88,10 +88,16 @@ footer a {
     color: #faf3e0;
     text-decoration: none;
     font-weight: bold;
+    background-color: #d4af37; /* Couleur dorée */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    padding: 10px 20px;
 }
 
 footer a:hover {
     text-decoration: underline;
+    background-color: #d4af37; /* Couleur dorée */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    padding: 10px 20px;
 }
 
 /* Sections de contenu */
@@ -137,7 +143,7 @@ section p {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     header h1 {
         font-size: 2.5rem;
     }
@@ -147,7 +153,9 @@ section p {
     }
 
     .carousel img {
-        height: 50vh; /* Réduit la taille des images sur les petits écrans */
+        height: auto; /* Permet aux images de conserver leurs proportions */
+        width: 100%;  /* Utilise toute la largeur disponible */
+        object-fit: cover; /* Adapte l'image à la taille du conteneur */
     }
 
     .navbar .nav-link {
