@@ -3,93 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les tarifs du Festival International d'Animation. Des options pour tous : tarifs normaux, réduits, étudiants et plus. Rejoignez-nous !">
+    <title>Tarifs du Festival International d'Animation - Options pour Tous</title>
+    <!-- Lien vers le CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    
-    <title>Tarifs du Festival</title>
     <style>
+        /* Styles pour personnaliser la table */
         table {
-            width: 80%; /* Largeur du tableau */
-            border-collapse: collapse; /* Supprime les espaces entre les cellules */
-            margin: 20px auto; /* Centrer le tableau */
-            font-family: Arial, sans-serif; /* Police pour un style plus proche */
+            width: 80%; 
+            border-collapse: collapse; 
+            margin: 20px auto; 
+            font-family: Arial, sans-serif; 
             font-size: 14px;
         }
         th, td {
-            border: 1px solid #ccc; /* Bordure légère autour des cellules */
-            padding: 10px; /* Espacement interne */
-            text-align: left; /* Texte aligné à gauche */
+            border: 1px solid #ccc;
+            padding: 10px; 
+            text-align: left;
         }
         th {
-            background-color: #e26a00; /* Orange foncé pour l'en-tête */
-            color: white; /* Texte en blanc */
+            background-color: #e26a00; 
+            color: white;
             font-weight: bold;
         }
         tr:nth-child(odd) td {
-            background-color: #ffe4b2; /* Orange clair pour les lignes impaires */
+            background-color: #ffe4b2; 
         }
         tr:nth-child(even) td {
-            background-color: #ffffff; /* Blanc pour les lignes paires */
+            background-color: #ffffff; 
         }
         td:first-child {
-            width: 70%; /* La première colonne est plus large */
+            width: 70%; 
         }
         h1 {
-            text-align: center; /* Centrer le titre */
-            color: #e26a00; /* Couleur orange foncé pour le titre */
+            text-align: center; 
+            color: #e26a00; 
         }
         p {
-            text-align: center; /* Centrer le texte de l'introduction */
+            text-align: center;
             font-size: 16px;
-            color: #333; /* Couleur du texte */
+            color: #333;
             margin: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Tarifs du Festival</h1>
-    <p>Découvrez ci-dessous les tarifs pour accéder à notre festival d'animation. Nous proposons différentes catégories de tarifs pour répondre aux besoins de tous les visiteurs. Veuillez consulter les informations ci-dessous pour plus de détails.</p>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Catégories</th>
-                <th>Tarifs</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Normal</strong></td>
-                <td>32&euro;</td>
-            </tr>
-            <tr>
-                <td><strong>Réduit (enfants entre 12 et 18, séniors de plus de 65 ans)</strong></td>
-                <td>24&euro;</td>
-            </tr>
-            <tr>
-                <td><strong>Étudiant, demandeurs d'emploi</strong></td>
-                <td>20&euro;</td>
-            </tr>
-            <tr>
-                <td><strong>Membre de l'association du festival international d'animation d'Annecy</strong></td>
-                <td>12&euro;</td>
-            </tr>
-            <tr>
-                <td><strong>-12 ans</strong></td>
-                <td>Gratuit</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e26a00;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-bank"></i> Festival International d'Animation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="oeuvres.html">Les Œuvres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a-propos.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informations.html">Informations pratiques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarifs.html">Tarifs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    
-    <p>Pour toute question ou demande d'informations supplémentaires, 
-        n'hésitez pas à nous contacter ou à visiter notre site web. 
-        Nous vous remercions de votre intérêt pour notre événement !</p>
+    <header>
+        <h1>Tarifs du Festival International d'Animation</h1>
+        <p>Découvrez nos tarifs adaptés à toutes les catégories de visiteurs. Profitez d'un événement inoubliable au cœur de l'animation internationale.</p>
+    </header>
 
-        <footer class="text-center py-3 bg-light">
-        <a href="index.html" class="btn btn-secondary">Retour à l'accueil</a>
-        </footer>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Catégories</th>
+                        <th>Tarifs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Normal</strong></td>
+                        <td>32&euro;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Réduit (enfants entre 12 et 18, séniors de plus de 65 ans)</strong></td>
+                        <td>24&euro;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Étudiant, demandeurs d'emploi</strong></td>
+                        <td>20&euro;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Membre de l'association du festival international d'animation d'Annecy</strong></td>
+                        <td>12&euro;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-12 ans</strong></td>
+                        <td>Gratuit</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <p>Pour en savoir plus sur les tarifs et les avantages du Festival International d'Animation, <a href="./informations.html">allez sur notre page d'informations</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Festival International d'Animation. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Lien vers le fichier JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
