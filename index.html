@@ -90,6 +90,19 @@
             <span class="visually-hidden">Suivant</span>
         </button>
     </div>
+ <div id="cookie-banner" style="background: #333; color: white; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; z-index: 1000;">
+        <p>
+            Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez leur utilisation. 
+            <a href="/politique-de-confidentialite" style="color: #00f;">En savoir plus</a>
+        </p>
+        <button onclick="acceptCookies()" style="background: #e26a00; color: white; border: none; padding: 10px; cursor: pointer;">Accepter</button>
+    </div>
+    <script>
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            // Placez ici le code pour enregistrer le consentement.
+        }
+    </script>
 
     <!-- Footer -->
     <footer>
