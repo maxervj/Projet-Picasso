@@ -3,64 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez les tarifs du Festival International d'Animation. Des options pour tous : tarifs normaux, réduits, étudiants et plus. Rejoignez-nous !">
-    <title>Tarifs du Festival International d'Animation - Options pour Tous</title>
-    <!-- Lien vers le CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    
+    <title>Tarifs du Festival</title>
     <style>
-        /* Styles pour personnaliser la table et le formulaire */
         table {
-            width: 80%; 
-            border-collapse: collapse; 
-            margin: 20px auto; 
-            font-family: Arial, sans-serif; 
+            width: 80%; /* Largeur du tableau */
+            border-collapse: collapse; /* Supprime les espaces entre les cellules */
+            margin: 20px auto; /* Centrer le tableau */
+            font-family: Arial, sans-serif; /* Police pour un style plus proche */
             font-size: 14px;
         }
         th, td {
-            border: 1px solid #ccc;
-            padding: 10px; 
-            text-align: left;
+            border: 1px solid #ccc; /* Bordure légère autour des cellules */
+            padding: 10px; /* Espacement interne */
+            text-align: left; /* Texte aligné à gauche */
         }
         th {
-            background-color: #e26a00; 
-            color: white;
+            background-color: #e26a00; /* Orange foncé pour l'en-tête */
+            color: white; /* Texte en blanc */
             font-weight: bold;
         }
         tr:nth-child(odd) td {
-            background-color: #ffe4b2; 
+            background-color: #ffe4b2; /* Orange clair pour les lignes impaires */
         }
         tr:nth-child(even) td {
-            background-color: #ffffff; 
+            background-color: #ffffff; /* Blanc pour les lignes paires */
         }
         td:first-child {
-            width: 70%; 
+            width: 70%; /* La première colonne est plus large */
         }
         h1 {
-            text-align: center; 
-            color: #e26a00; 
+            text-align: center; /* Centrer le titre */
+            color: #e26a00; /* Couleur orange foncé pour le titre */
         }
         p {
-            text-align: center;
+            text-align: center; /* Centrer le texte de l'introduction */
             font-size: 16px;
-            color: #333;
+            color: #333; /* Couleur du texte */
             margin: 20px;
-        }
-        .form-control {
-            max-width: 100px;
-        }
-        .total-container {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-            margin: 20px;
-        }
-        .btn-calculate {
-            background-color: #e26a00;
-            color: white;
         }
     </style>
+
+
+</style>
 </head>
-<body>
     <!-- Barre de navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e26a00;">
         <div class="container-fluid">
@@ -182,9 +173,11 @@
             document.getElementById('total').innerText = `Total: ${total}€`;
         });
     </script>
-    <!-- Footer -->
-<footer class="footer bg-light text-center py-4">
-    <p><a href="mentions-legales.html" style="color: #e26a00; text-decoration: none;">Mentions légales</a></p>
-</footer>
+    
+    <p>Pour toute question ou demande d'informations supplémentaires, 
+        n'hésitez pas à nous contacter ou à visiter notre site web. 
+        Nous vous remercions de votre intérêt pour notre événement !</p>
+
+      
 </body>
 </html>

@@ -3,79 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez les œuvres emblématiques de Pablo Picasso, allant des périodes cubiste à surréaliste. Explorez les significations derrière chaque tableau." />
-    <meta name="keywords" content="Pablo Picasso, œuvres, exposition Picasso, art, musée, peinture" />
-    <meta property="og:title" content="Les œuvres de Picasso" />
-    <meta property="og:description" content="Explorez les œuvres de Picasso et leur signification à travers cette exposition virtuelle." />
-    <meta property="og:image" content="path/to/thumbnail.jpg" />
-    <meta name="robots" content="index, follow" />
     <title>Les œuvres de Picasso</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-        }
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 
-        .artwork img {
-            max-height: 300px;
-            object-fit: cover;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-        h1, h2 {
-            margin-bottom: 20px;
-        }
-    </style>
+    
+  
 </head>
 <body>
-    <!-- Barre de navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e26a00;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <i class="bi bi-bank"></i> Exposition Picasso</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+     <!-- Barre de navigation -->
+ <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-bank"></i></i> Exposition Picasso</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="oeuvres.html">Les Œuvres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="a-propos.html">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="informations.html">Informations pratiques</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tarifs.html">Tarifs</a>
+
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="oeuvres.html">Les Œuvres</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="a-propos.html">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="informations.html">Informations pratiques</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tarifs.html">Tarifs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mentions-legales.html">Mentionslégales</a>
+                        <a class="nav-link" href="mentions-legales.html">Mentions légales</a>
 
                     </li>
-                </ul>
-            </div>
+            </ul>
         </div>
-    </nav>
-
+    </div>
+</nav>
     <header class="bg-light text-center py-5">
         <h1>Les Œuvres de Picasso</h1>
         <p class="lead">Découvrez les œuvres emblématiques de Pablo Picasso et explorez leur signification.</p>
     </header>
 
     <main class="container">
-        <h2>Œuvres Célèbres</h2>
         <div class="row g-4" id="oeuvres-container">
             <!-- Œuvre 1 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Femme_assise" target="_blank">
-                    <img src="img/Femme-asise.jpeg" class="img-fluid" alt="Femme Assise de Picasso, période cubiste">
+                    <img src="img/Femme-asise.jpeg" class="img-fluid" alt="Femme Assise">
                     <h5 class="text-center mt-2">Femme Assise</h5>
                 </a>
             </div>
@@ -83,7 +66,7 @@
             <!-- Œuvre 2 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/La_Femme_qui_pleure" target="_blank">
-                    <img src="img/La-femme-qui-pleure.jpeg" class="img-fluid" alt="La Femme qui Pleure de Picasso, période bleue">
+                    <img src="img/La-femme-qui-pleure.jpeg" class="img-fluid" alt="La Femme qui Pleure">
                     <h5 class="text-center mt-2">La Femme qui Pleure</h5>
                 </a>
             </div>
@@ -91,7 +74,7 @@
             <!-- Œuvre 3 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon" target="_blank">
-                    <img src="img/Les-Demoiselles-d-Avignon.jpg" class="img-fluid" alt="Les Demoiselles d'Avignon, œuvre cubiste de Picasso">
+                    <img src="img/Les-Demoiselles-d-Avignon.jpg" class="img-fluid" alt="Les Demoiselles d'Avignon">
                     <h5 class="text-center mt-2">Les Demoiselles d'Avignon</h5>
                 </a>
             </div>
@@ -99,7 +82,7 @@
             <!-- Œuvre 4 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Le_Baiser_(Picasso)" target="_blank">
-                    <img src="img/Le-Baiser.jpg" class="img-fluid" alt="Le Baiser, œuvre de Picasso inspirée de la période surréaliste">
+                    <img src="img/Le-Baiser.jpg" class="img-fluid" alt="Le Baiser">
                     <h5 class="text-center mt-2">Le Baiser</h5>
                 </a>
             </div>
@@ -107,7 +90,7 @@
             <!-- Œuvre 5 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Le_Rêve_(Picasso)" target="_blank">
-                    <img src="img/Le-reve.jpg" class="img-fluid" alt="Le Rêve, une peinture surréaliste de Picasso">
+                    <img src="img/Le-reve.jpg" class="img-fluid" alt="Le Rêve">
                     <h5 class="text-center mt-2">Le Rêve</h5>
                 </a>
             </div>
@@ -115,7 +98,7 @@
             <!-- Œuvre 6 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Le_Vieux_Guitariste_aveugle" target="_blank">
-                    <img src="img/Le-vieux-guitariste-aveugle.jpg" class="img-fluid" alt="Le Vieux Guitariste Aveugle, une œuvre de Picasso de la période bleue">
+                    <img src="img/Le-vieux-guitariste-aveugle.jpg" class="img-fluid" alt="Le Vieux Guitariste Aveugle">
                     <h5 class="text-center mt-2">Le Vieux Guitariste Aveugle</h5>
                 </a>
             </div>
@@ -123,7 +106,7 @@
             <!-- Œuvre 7 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Nu_dans_un_fauteuil_rouge" target="_blank">
-                    <img src="img/Nude-in-red-armchair.jpg" class="img-fluid" alt="Nu dans un Fauteuil Rouge, Picasso" />
+                    <img src="img/Nude-in-red-armchair.jpg" class="img-fluid" alt="Nu dans un Fauteuil Rouge">
                     <h5 class="text-center mt-2">Nu dans un Fauteuil Rouge</h5>
                 </a>
             </div>
@@ -131,7 +114,7 @@
             <!-- Œuvre 8 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Femme_à_la_fleur" target="_blank">
-                    <img src="img/La-femme-a╠Ç-la-fleur.jpeg" class="img-fluid" alt="La Femme à la Fleur de Picasso" />
+                    <img src="img/La-femme-a╠Ç-la-fleur.jpeg" class="img-fluid" alt="La Femme à la Fleur">
                     <h5 class="text-center mt-2">La Femme à la Fleur</h5>
                 </a>
             </div>
@@ -139,16 +122,71 @@
             <!-- Œuvre 9 -->
             <div class="col-lg-4 col-md-6 col-sm-12 artwork">
                 <a href="https://fr.wikipedia.org/wiki/Jeune_Fille_devant_un_miroir" target="_blank">
-                    <img src="img/Jeune-fille-devant-un-miroir.jpg" class="img-fluid" alt="Jeune Fille devant un Miroir de Picasso">
+                    <img src="img/Jeune-fille-devant-un-miroir.jpg" class="img-fluid" alt="Jeune Fille devant un Miroir">
                     <h5 class="text-center mt-2">Jeune Fille devant un Miroir</h5>
                 </a>
             </div>
         </div>
     </main>
 
-    <footer class="text-center py-3 bg-light mt-5">
-        <a href="index.html" class="btn btn-secondary">Retour à l'accueil</a>
-    </footer>
+    <div>Teachable Machine Image Model</div>
+    <button type="button" onclick="init()">Start</button>
+    <div id="webcam-container">
+        <video id="webcam" autoplay playsinline width="200" height="200"></video>
+    </div>
+    <div id="label-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        const URL = "https://teachablemachine.withgoogle.com/models/ijZtc4n3Y/";
+    
+        let model, video, labelContainer, maxPredictions;
+    
+        async function init() {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+    
+            // Charger le modèle et les métadonnées
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+    
+            // Initialiser la webcam avec getUserMedia()
+            video = document.getElementById("webcam");
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+                video.onloadedmetadata = () => {
+                    video.play();
+                    loop(); // Démarrer la boucle de prédiction
+                };
+            } catch (err) {
+                console.error("Erreur d'accès à la webcam : ", err);
+            }
+    
+            // Ajouter les conteneurs de labels
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                labelContainer.appendChild(document.createElement("div"));
+            }
+        }
+    
+        async function loop() {
+            await predict();
+            requestAnimationFrame(loop);
+        }
+    
+        async function predict() {
+            const prediction = await model.predict(video); // Prédire depuis l'élément vidéo
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction =
+                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+        }
+    </script>
+    
+   
+
 
     <script>
         // Fonction pour mélanger un tableau
@@ -172,11 +210,9 @@
         oeuvresContainer.innerHTML = '';
         artworks.forEach(artwork => oeuvresContainer.appendChild(artwork));
     </script>
-    <!-- Footer -->
-<footer class="footer bg-light text-center py-4">
-    <p>&copy; 2024 Festival International d'Animation. Tous droits réservés.</p>
-    <p><a href="mentions-legales.html" style="color: #e26a00; text-decoration: none;">Mentions légales</a></p>
-</footer>
+
+ <!-- Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
